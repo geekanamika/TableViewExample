@@ -13,19 +13,41 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     let myTableView = UITableView(frame: .zero)
     private let cellReuseId = "cell-reuse-id"
     
-    var zomoLogo = UIImage(named: "logo")
+    // var zomoLogo = UIImage(named: "logo")
     
-    let titles = ["1st","2nd" , "third" , "fourth", "fifth", "sixth", "seven", "eight" ]
-    let subTitles = ["1st","2nd" , "third" , "fourth", "fifth", "sixth", "seven", "eight" ]
+    var dataArray = [ResModel]()
+    
+   func createDataArray() {
+        
+        for i in 1...20 {
+            
+            if i % 2 == 0 {
+                dataArray.append( ResModel(restaurantname: "Wow momos", detail: "Momos, Noodles, Rolls",
+                                           dis: "1.5 kms, Sector 21", offer: "Rs 150 for two", img : "wowlogo.png" ) )
+            
+            } else {
+                dataArray.append( ResModel(restaurantname: "McD", detail: "Burger, McPuff, Coke, McFlurry",
+                                           dis: "0.11 kms, Sector 43", offer: "Rs 200 for two" , img : "mcdlogo.png" ) )
+            
+            }
+        }
+        
+    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return titles.count
+        return dataArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseId, for: indexPath) as! MyTableViewCell
-        cell.setData(titleText: titles[indexPath.row], subTitleText: subTitles[indexPath.row], image : zomoLogo! )
+        let logo = UIImage(named: dataArray[indexPath.row].resImage )
+        
+        cell.setData(titleText: dataArray[indexPath.row].restaurantName,
+                     subTitleText: dataArray[indexPath.row].resDetail,
+                     distance: dataArray[indexPath.row].disDetail,
+                     offer: dataArray[indexPath.row].offerDetail,
+                     image : logo! )
         return cell
     }
     
@@ -36,11 +58,9 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        createDataArray()
         createTableView()
         myTableView.register(MyTableViewCell.self, forCellReuseIdentifier: cellReuseId)
-        
-        
         
     }
     
@@ -55,6 +75,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     }
     
     fileprivate func firstRow() {
+        
         let paddingConstant : CGFloat = 8
         let heightConstant : CGFloat = 140
         

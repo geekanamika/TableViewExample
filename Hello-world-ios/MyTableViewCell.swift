@@ -11,8 +11,11 @@ import UIKit
 class MyTableViewCell: UITableViewCell {
     
     let dpView = UIImageView()
-    let titleLabelView = UILabel()
-    let subTitleView = UILabel()
+    let resNameLabelView = UILabel()
+    let detailLabelView = UILabel()
+    let disLabelView = UILabel()
+    let offerLabelView = UILabel()
+    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style,reuseIdentifier: reuseIdentifier)
@@ -25,43 +28,72 @@ class MyTableViewCell: UITableViewCell {
     
     private func creteTableCellViews() {
         let paddingConstant : CGFloat = 8
+        let smallPaddingConstant : CGFloat = 4
         // add subViews
         contentView.addSubview(dpView)
-        contentView.addSubview(titleLabelView)
-        contentView.addSubview(subTitleView)
+        contentView.addSubview(resNameLabelView)
+        contentView.addSubview(detailLabelView)
+        contentView.addSubview(disLabelView)
+        contentView.addSubview(offerLabelView)
         
-        dpView.layer.cornerRadius = 25
-        dpView.layer.borderWidth = 1
-         dpView.layer.borderColor = UIColor.black.cgColor
+        // set font - size , colors
+        resNameLabelView.font = resNameLabelView.font.withSize(18)
+        detailLabelView.font = detailLabelView.font.withSize(15)
+        offerLabelView.font = offerLabelView.font.withSize(12)
+        disLabelView.font = disLabelView.font.withSize(10)
+        resNameLabelView.textColor = UIColor.black
+        offerLabelView.textColor = UIColor.gray
+        disLabelView.textColor = UIColor.lightGray
+        detailLabelView.textColor = UIColor.gray
+        
+        dpView.layer.cornerRadius = 2
+        // dpView.layer.borderColor = UIColor.black.cgColor
         dpView.set(
                 .top(contentView, paddingConstant),
                 .leading(contentView, paddingConstant),
-                .height(50),
-                .width(50),
+                .height(80),
+                .width(80),
                 .bottom(contentView, paddingConstant)
         )
         
-        titleLabelView.set(
+        resNameLabelView.set(
             .top(dpView),
             .after(dpView, paddingConstant),
             .trailing(contentView, paddingConstant)
         )
         
-        subTitleView.set(
-            .below(titleLabelView, paddingConstant),
+        detailLabelView.set(
+            .below(resNameLabelView, smallPaddingConstant),
             .after(dpView, paddingConstant),
             .trailing(contentView, paddingConstant)
         )
         
-        titleLabelView.text = "Title"
-        subTitleView.text = "SubTitle"
+        disLabelView.set(
+            .below(detailLabelView, smallPaddingConstant),
+            .after(dpView, paddingConstant),
+            .trailing(contentView, paddingConstant)
+        )
+        
+        offerLabelView.set(
+            .below(disLabelView, smallPaddingConstant),
+            .after(dpView, paddingConstant),
+            .trailing(contentView, paddingConstant)
+        )
+        
+        // hardcode to check if it's working or not
+        resNameLabelView.text = "res name"
+        detailLabelView.text = "res details"
+        offerLabelView.text = "offers"
+        disLabelView.text = "distance from your place"
         dpView.backgroundColor = .red
     }
     
-    public func setData(titleText : String, subTitleText : String, image: UIImage) {
+    public func setData(titleText : String, subTitleText : String, distance: String, offer : String,  image: UIImage) {
     dpView.image = image
-    titleLabelView.text = titleText
-    subTitleView.text = subTitleText
+    resNameLabelView.text = titleText
+    detailLabelView.text = subTitleText
+    disLabelView.text = distance
+    offerLabelView.text = offer
 }
 
 }

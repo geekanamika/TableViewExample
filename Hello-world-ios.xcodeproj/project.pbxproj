@@ -14,6 +14,7 @@
 		C518199022C33CFD005B0646 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C518198E22C33CFD005B0646 /* LaunchScreen.storyboard */; };
 		C518199822C34BC3005B0646 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C518199722C34BC3005B0646 /* UIView+Layout.swift */; };
 		C518199A22C358C3005B0646 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C518199922C358C3005B0646 /* MyTableViewCell.swift */; };
+		C518199C22C38B53005B0646 /* ResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C518199B22C38B53005B0646 /* ResModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		C518199122C33CFD005B0646 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C518199722C34BC3005B0646 /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		C518199922C358C3005B0646 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		C518199B22C38B53005B0646 /* ResModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				C518198E22C33CFD005B0646 /* LaunchScreen.storyboard */,
 				C518199122C33CFD005B0646 /* Info.plist */,
 				C518199922C358C3005B0646 /* MyTableViewCell.swift */,
+				C518199B22C38B53005B0646 /* ResModel.swift */,
 			);
 			path = "Hello-world-ios";
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				C518198822C33CFB005B0646 /* ViewController.swift in Sources */,
 				C518199A22C358C3005B0646 /* MyTableViewCell.swift in Sources */,
 				C518198622C33CFB005B0646 /* AppDelegate.swift in Sources */,
+				C518199C22C38B53005B0646 /* ResModel.swift in Sources */,
 				C518199822C34BC3005B0646 /* UIView+Layout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
