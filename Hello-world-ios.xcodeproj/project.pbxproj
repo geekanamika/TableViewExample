@@ -12,6 +12,8 @@
 		C518198B22C33CFB005B0646 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C518198922C33CFB005B0646 /* Main.storyboard */; };
 		C518198D22C33CFD005B0646 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C518198C22C33CFD005B0646 /* Assets.xcassets */; };
 		C518199022C33CFD005B0646 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C518198E22C33CFD005B0646 /* LaunchScreen.storyboard */; };
+		C518199822C34BC3005B0646 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C518199722C34BC3005B0646 /* UIView+Layout.swift */; };
+		C518199A22C358C3005B0646 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C518199922C358C3005B0646 /* MyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		C518198C22C33CFD005B0646 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C518198F22C33CFD005B0646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C518199122C33CFD005B0646 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C518199722C34BC3005B0646 /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		C518199922C358C3005B0646 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +58,14 @@
 		C518198422C33CFB005B0646 /* Hello-world-ios */ = {
 			isa = PBXGroup;
 			children = (
+				C518199722C34BC3005B0646 /* UIView+Layout.swift */,
 				C518198522C33CFB005B0646 /* AppDelegate.swift */,
 				C518198722C33CFB005B0646 /* ViewController.swift */,
 				C518198922C33CFB005B0646 /* Main.storyboard */,
 				C518198C22C33CFD005B0646 /* Assets.xcassets */,
 				C518198E22C33CFD005B0646 /* LaunchScreen.storyboard */,
 				C518199122C33CFD005B0646 /* Info.plist */,
+				C518199922C358C3005B0646 /* MyTableViewCell.swift */,
 			);
 			path = "Hello-world-ios";
 			sourceTree = "<group>";
@@ -136,7 +142,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C518198822C33CFB005B0646 /* ViewController.swift in Sources */,
+				C518199A22C358C3005B0646 /* MyTableViewCell.swift in Sources */,
 				C518198622C33CFB005B0646 /* AppDelegate.swift in Sources */,
+				C518199822C34BC3005B0646 /* UIView+Layout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
